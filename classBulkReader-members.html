@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,10 +88,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classBulkReader.html">BulkReader</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">Bulk</a> typedef</td><td class="entry"><a class="el" href="classBulkReader.html">BulkReader</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">BulkReader</a>(size_t bulk_size, std::istream &amp;istream=std::cin)</td><td class="entry"><a class="el" href="classBulkReader.html">BulkReader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBulkReader.html#a8b1c5b6ed323f8b4a619ae11a4ce001d">readCommands</a>() const </td><td class="entry"><a class="el" href="classBulkReader.html">BulkReader</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBulkReader.html#aeb97fcb768fda3d107f8c2043a096f1b">subscribe</a>(const std::function&lt; void(const Bulk &amp;)&gt; &amp;function)</td><td class="entry"><a class="el" href="classBulkReader.html">BulkReader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">BulkReader</a>(size_t bulk_size, std::istream &amp;istream=std::cin)</td><td class="entry"><a class="el" href="classBulkReader.html">BulkReader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classBulkReader.html#a8b1c5b6ed323f8b4a619ae11a4ce001d">readCommands</a>() const </td><td class="entry"><a class="el" href="classBulkReader.html">BulkReader</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBulkReader.html#af5e2939dcdb2800a963feb0d7efe39b2">subscribe</a>(const std::function&lt; void(const std::vector&lt; std::string &gt; &amp;)&gt; &amp;function)</td><td class="entry"><a class="el" href="classBulkReader.html">BulkReader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

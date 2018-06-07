@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -100,36 +100,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classBulkReader.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBulkReader.html">BulkReader</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">   14</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">Bulk</a> = std::vector&lt;std::string&gt;;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">   19</a></span>&#160;  <a class="code" href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">BulkReader</a>(<span class="keywordtype">size_t</span> bulk_size, std::istream&amp; istream = std::cin)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    : bulk_size_{ bulk_size }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    , istream_{ istream }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  {}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classBulkReader.html#aeb97fcb768fda3d107f8c2043a096f1b">   26</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBulkReader.html#aeb97fcb768fda3d107f8c2043a096f1b">subscribe</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> <a class="code" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">Bulk</a>&amp;)&gt;&amp; <span class="keyword">function</span>) { subscribers_.push_back(<span class="keyword">function</span>); }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBulkReader.html#a8b1c5b6ed323f8b4a619ae11a4ce001d">readCommands</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  std::vector&lt;std::function&lt;void(const Bulk&amp;)&gt;&gt; subscribers_;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  std::istream&amp; istream_;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">size_t</span> bulk_size_;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> notify(<a class="code" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">Bulk</a>&amp; bulk)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; subscriber : subscribers_) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      subscriber(bulk);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // BULK_BULK_H</span></div>
-<div class="ttc" id="classBulkReader_html_a50434bd9eb05e28ebb4eccd44666ae2d"><div class="ttname"><a href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">BulkReader::BulkReader</a></div><div class="ttdeci">BulkReader(size_t bulk_size, std::istream &amp;istream=std::cin)</div><div class="ttdef"><b>Definition:</b> BulkReader.h:19</div></div>
-<div class="ttc" id="classBulkReader_html_aeb97fcb768fda3d107f8c2043a096f1b"><div class="ttname"><a href="classBulkReader.html#aeb97fcb768fda3d107f8c2043a096f1b">BulkReader::subscribe</a></div><div class="ttdeci">void subscribe(const std::function&lt; void(const Bulk &amp;)&gt; &amp;function)</div><div class="ttdef"><b>Definition:</b> BulkReader.h:26</div></div>
-<div class="ttc" id="classBulkReader_html_a6b4731239ac06dc3c2cfe9f7d672a620"><div class="ttname"><a href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">BulkReader::Bulk</a></div><div class="ttdeci">std::vector&lt; std::string &gt; Bulk</div><div class="ttdef"><b>Definition:</b> BulkReader.h:14</div></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">   17</a></span>&#160;  <a class="code" href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">BulkReader</a>(<span class="keywordtype">size_t</span> bulk_size, std::istream&amp; istream = std::cin)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    : bulk_size_{ bulk_size }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    , istream_{ istream }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  {}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classBulkReader.html#af5e2939dcdb2800a963feb0d7efe39b2">   24</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBulkReader.html#af5e2939dcdb2800a963feb0d7efe39b2">subscribe</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp;)&gt;&amp; <span class="keyword">function</span>) { subscribers_.push_back(<span class="keyword">function</span>); }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBulkReader.html#a8b1c5b6ed323f8b4a619ae11a4ce001d">readCommands</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  std::vector&lt;std::function&lt;void(const std::vector&lt;std::string&gt;&amp;)&gt;&gt; subscribers_;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  std::istream&amp; istream_;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">size_t</span> bulk_size_;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> notify (<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; bulk)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; subscriber : subscribers_) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      subscriber(bulk);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // BULK_BULK_H</span></div>
+<div class="ttc" id="classBulkReader_html_a50434bd9eb05e28ebb4eccd44666ae2d"><div class="ttname"><a href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">BulkReader::BulkReader</a></div><div class="ttdeci">BulkReader(size_t bulk_size, std::istream &amp;istream=std::cin)</div><div class="ttdef"><b>Definition:</b> BulkReader.h:17</div></div>
 <div class="ttc" id="classBulkReader_html_a8b1c5b6ed323f8b4a619ae11a4ce001d"><div class="ttname"><a href="classBulkReader.html#a8b1c5b6ed323f8b4a619ae11a4ce001d">BulkReader::readCommands</a></div><div class="ttdeci">void readCommands() const </div><div class="ttdef"><b>Definition:</b> BulkReader.cpp:4</div></div>
 <div class="ttc" id="classBulkReader_html"><div class="ttname"><a href="classBulkReader.html">BulkReader</a></div><div class="ttdoc">Reader of bulks from input streams and send them to subscribers. </div><div class="ttdef"><b>Definition:</b> BulkReader.h:11</div></div>
+<div class="ttc" id="classBulkReader_html_af5e2939dcdb2800a963feb0d7efe39b2"><div class="ttname"><a href="classBulkReader.html#af5e2939dcdb2800a963feb0d7efe39b2">BulkReader::subscribe</a></div><div class="ttdeci">void subscribe(const std::function&lt; void(const std::vector&lt; std::string &gt; &amp;)&gt; &amp;function)</div><div class="ttdef"><b>Definition:</b> BulkReader.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

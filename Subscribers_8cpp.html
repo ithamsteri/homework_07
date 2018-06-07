@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>print_ip: src Directory Reference</title>
+<title>print_ip: src/Subscribers.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,7 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -56,6 +56,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           </span>
         </div>
       </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -78,31 +84,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">src Directory Reference</div>  </div>
+<div class="title">Subscribers.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Directory dependency graph for src:</div>
+<div class="textblock"><code>#include &quot;<a class="el" href="Subscribers_8h_source.html">Subscribers.h</a>&quot;</code><br/>
+<code>#include &lt;chrono&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for Subscribers.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png" border="0" usemap="#dir__68267d1309a1af8e8297ef4c3efbcdba__dep" alt="src"/></div>
-<map name="dir__68267d1309a1af8e8297ef4c3efbcdba__dep" id="dir__68267d1309a1af8e8297ef4c3efbcdba__dep">
-<area shape="rect" id="node1" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" title="src" alt="" coords="5,5,77,53"/></map>
+<div class="center"><img src="Subscribers_8cpp__incl.png" border="0" usemap="#src_2Subscribers_8cpp" alt=""/></div>
+<map name="src_2Subscribers_8cpp" id="src_2Subscribers_8cpp">
+<area shape="rect" id="node2" href="Subscribers_8h.html" title="Subscribers.h" alt="" coords="33,80,135,107"/></map>
 </div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:BulkReader_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BulkReader_8cpp.html">BulkReader.cpp</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:BulkReader_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BulkReader_8h.html">BulkReader.h</a> <a href="BulkReader_8h_source.html">[code]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:main_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html">main.cpp</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:Subscribers_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Subscribers_8cpp.html">Subscribers.cpp</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:Subscribers_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Subscribers_8h.html">Subscribers.h</a> <a href="Subscribers_8h_source.html">[code]</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af80f2d60347ee8a38838fb2d86f5e9d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Subscribers_8cpp.html#af80f2d60347ee8a38838fb2d86f5e9d8">sendBulkToOstream</a> (std::ostream &amp;ostream, const std::vector&lt; std::string &gt; &amp;bulk)</td></tr>
+<tr class="separator:af80f2d60347ee8a38838fb2d86f5e9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16dda250e28b4138fecdcecfeb8bdbbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Subscribers_8cpp.html#a16dda250e28b4138fecdcecfeb8bdbbf">bulkToLogFile</a> (const std::vector&lt; std::string &gt; &amp;bulk)</td></tr>
+<tr class="separator:a16dda250e28b4138fecdcecfeb8bdbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a16dda250e28b4138fecdcecfeb8bdbbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bulkToLogFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bulk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af80f2d60347ee8a38838fb2d86f5e9d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendBulkToOstream </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>ostream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bulk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

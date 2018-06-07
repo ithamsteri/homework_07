@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,7 +82,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classBulkReader-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -95,36 +94,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="BulkReader_8h_source.html">BulkReader.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a6b4731239ac06dc3c2cfe9f7d672a620"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">Bulk</a> = std::vector&lt; std::string &gt;</td></tr>
-<tr class="separator:a6b4731239ac06dc3c2cfe9f7d672a620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a50434bd9eb05e28ebb4eccd44666ae2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBulkReader.html#a50434bd9eb05e28ebb4eccd44666ae2d">BulkReader</a> (size_t bulk_size, std::istream &amp;istream=std::cin)</td></tr>
 <tr class="separator:a50434bd9eb05e28ebb4eccd44666ae2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb97fcb768fda3d107f8c2043a096f1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBulkReader.html#aeb97fcb768fda3d107f8c2043a096f1b">subscribe</a> (const std::function&lt; void(const <a class="el" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">Bulk</a> &amp;)&gt; &amp;function)</td></tr>
-<tr class="separator:aeb97fcb768fda3d107f8c2043a096f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e2939dcdb2800a963feb0d7efe39b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBulkReader.html#af5e2939dcdb2800a963feb0d7efe39b2">subscribe</a> (const std::function&lt; void(const std::vector&lt; std::string &gt; &amp;)&gt; &amp;function)</td></tr>
+<tr class="separator:af5e2939dcdb2800a963feb0d7efe39b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b1c5b6ed323f8b4a619ae11a4ce001d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBulkReader.html#a8b1c5b6ed323f8b4a619ae11a4ce001d">readCommands</a> () const </td></tr>
 <tr class="separator:a8b1c5b6ed323f8b4a619ae11a4ce001d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Reader of bulks from input streams and send them to subscribers. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a6b4731239ac06dc3c2cfe9f7d672a620"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">BulkReader::Bulk</a> =  std::vector&lt;std::string&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a50434bd9eb05e28ebb4eccd44666ae2d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +171,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeb97fcb768fda3d107f8c2043a096f1b"></a>
+<a class="anchor" id="af5e2939dcdb2800a963feb0d7efe39b2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -200,7 +181,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void BulkReader::subscribe </td>
           <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const <a class="el" href="classBulkReader.html#a6b4731239ac06dc3c2cfe9f7d672a620">Bulk</a> &amp;)&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; void(const std::vector&lt; std::string &gt; &amp;)&gt; &amp;&#160;</td>
           <td class="paramname"><em>function</em></td><td>)</td>
           <td></td>
         </tr>
