@@ -2,7 +2,10 @@
 add_executable(bulk
         main.cpp
         BulkReader.h
-        BulkReader.cpp)
+        BulkReader.cpp
+        Subscribers.h
+        Subscribers.cpp
+        )
 
 set_target_properties(bulk PROPERTIES
         CXX_STANDARD 14
