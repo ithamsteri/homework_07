@@ -6,6 +6,9 @@
 void
 sendBulkToOstream(std::ostream& ostream, const std::vector<std::string>& bulk)
 {
+  if (bulk.empty())
+    return;
+
   ostream << "bulk: ";
   for (auto iter = bulk.cbegin(); iter != bulk.cend(); ++iter) {
     if (iter != bulk.cbegin())
