@@ -1,6 +1,8 @@
-# Домашнее задание 7: bulk
+# Домашнее задание 07
 
-## Условие
+[![Build Status](https://travis-ci.org/ithamsteri/homework_07.svg?branch=master)](https://travis-ci.org/ithamsteri/homework_07)
+
+## Условие задания
 
 Разобрать программу для пакетоной обработки команд. Команды считываются
 построчно из стандартного ввода и обрабатываются блоками по N команд.
@@ -96,3 +98,47 @@ cmd7  |
 Будет отмечена скорость выполнения задания, узнаваемый шаблон "наблюдатель",
 низкая связанность обработки данных, накопления пачек команд, вывода в консоль
 и сохранения в файлы.
+
+## Установка, сборка и тестирование
+
+### Установка пакета
+
+Для Ubuntu Trusty нужно сделать следующее:
+
+```shell
+echo "deb http://dl.bintray.com/hamsterisoftware/deb-repo trusty main" | sudo tee -a /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
+sudo apt-get update && sudo apt-get install bulk
+```
+
+### Генерация сборки
+
+Запустить в корневом каталоге проекта
+
+```shell
+cmake -H. -BBuild -DBUILD_TESTING=ON
+```
+
+### Сборка проекта
+
+Запустить в каталоге Build
+
+```shell
+cmake --build .
+```
+
+### Тестирование проекта
+
+Запустить в каталоге Build
+
+```shell
+cmake --build . --target test
+```
+
+### Сборка пакета
+
+Запустить в каталоге Build
+
+```shell
+cmake --build . --target package
+```
