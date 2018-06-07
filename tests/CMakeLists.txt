@@ -7,7 +7,13 @@ if (BUILD_TESTING)
             ${SOURCE_PATH}/BulkReader.cpp
             )
 
-    set_target_properties(bulk_test PROPERTIES
+    add_executable(subscribers_test
+            Subscribers.test.cpp
+            ${SOURCE_PATH}/Subscribers.h
+            ${SOURCE_PATH}/Subscribers.cpp
+            )
+
+    set_target_properties(bulk_test subscribers_test PROPERTIES
             CXX_STANDARD 14
             CXX_STANDARD_REQUIRED ON
             COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
@@ -16,4 +22,5 @@ if (BUILD_TESTING)
             )
 
     add_test(BulkTest bulk_test)
+    add_test(SubscribersTest subscribers_test)
 endif()

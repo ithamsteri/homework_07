@@ -17,7 +17,7 @@ main(int argc, char* argv[])
   }
 
   BulkReader reader(static_cast<size_t>(bulk_size));
-  reader.subscribe([](const BulkReader::Bulk& bulk) { sendBulkToOstream(std::cout, bulk); });
+  reader.subscribe([](const std::vector<std::string>& bulk) { sendBulkToOstream(std::cout, bulk); });
   reader.subscribe(bulkToLogFile);
 
   try {

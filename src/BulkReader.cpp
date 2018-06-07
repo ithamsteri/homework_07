@@ -3,7 +3,7 @@
 void
 BulkReader::readCommands() const
 {
-  Bulk bulkBuffer;
+  std::vector<std::string> bulkBuffer;
   bulkBuffer.reserve(bulk_size_);
 
   std::string command;

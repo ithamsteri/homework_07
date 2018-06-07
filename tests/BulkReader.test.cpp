@@ -7,7 +7,7 @@
 #include <vector>
 
 std::string
-bulkToString(const BulkReader::Bulk& bulk)
+bulkToString(const std::vector<std::string>& bulk)
 {
   std::ostringstream ostringstream;
 
@@ -29,7 +29,7 @@ bulkTest(size_t size, const std::string& commands, const std::string& expected)
   std::istringstream istream(commands);
 
   BulkReader bulkReader(size, istream);
-  bulkReader.subscribe([&result](const BulkReader::Bulk& bulk) { result += bulkToString(bulk); });
+  bulkReader.subscribe([&result](const std::vector<std::string>& bulk) { result += bulkToString(bulk); });
   bulkReader.readCommands();
 
   return result == expected;
