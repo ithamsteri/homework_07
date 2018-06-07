@@ -1,0 +1,30 @@
+dist: trusty
+sudo: required
+language: cpp
+compiler: gcc
+
+before_script:
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update -qq
+- sudo apt-get install -qq g++-7 graphviz doxygen libboost-test1.54-dev
+- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 60
+
+script:
+- cmake -DBUILD=TESTING=ON -DCMAKE_BUILD_TYPE=Release .
+- cmake --build .
+- cmake --build . --target test
+- cmake --build . --target package
+- doxygen Doxyfile
+
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: html
+    on:
+      branch: master
+  - provider: script
+    skip_cleanup: true
+    script:
+    - curl -T bulk-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uithamsteri:$BINTRAY_API_KEY "https://api.bintray.com/content/hamsterisoftware/deb-repo/bulk/0.0.$TRAVIS_BUILD_NUMBER/pool/main/b/bulk-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1;override=1"
